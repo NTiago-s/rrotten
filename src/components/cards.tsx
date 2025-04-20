@@ -2,9 +2,22 @@
 import { useState } from "react";
 import { menuItems } from "@/utils/menu";
 
-export default function Card() {
-  const [selectedItem, setSelectedItem] = useState(null);
+type MenuItem = {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  category: string;
+  image: string;
+  calories: number;
+  fat: number;
+  carbs: number;
+  protein: number;
+  badges: string[];
+};
 
+export default function Card() {
+  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4">
