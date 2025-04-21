@@ -15,7 +15,7 @@ export default function Footer() {
               alt="Flowbite Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-primary-txt">
-              Codeluxe
+              Rrotten
             </span>
           </Link>
           <ul className="flex flex-wrap items-center [&>li>a]:p-2 md:[&>li>a]:p-0 gap-2 mb-6 text-sm text-secondary-txt sm:mb-0">
@@ -52,7 +52,7 @@ export default function Footer() {
         <span className="block text-sm text-secondary-txt sm:text-center ">
           © 2025{" "}
           <Link href="/" className="hover:underline" aria-label="Inicio">
-            Codeluxe™
+            Rrotten™
           </Link>
           . Todos los derechos reservados.
         </span>

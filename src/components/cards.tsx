@@ -32,17 +32,11 @@ export default function Card() {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h2 className="text-xl font-semibold text-gray-800">
-                {item.title}
-              </h2>
-              <p className="text-gray-600 text-sm mt-2">{item.description}</p>
+              <h2 className="text-xl font-semibold">{item.title}</h2>
+              <p className="text-sm mt-2">{item.description}</p>
               <div className="flex justify-between items-center mt-4">
-                <span className="text-sm text-blue-600 font-medium">
-                  {item.category}
-                </span>
-                <span className="text-lg font-bold text-gray-800">
-                  ${item.price}
-                </span>
+                <span className="text-sm font-medium">{item.category}</span>
+                <span className="text-lg font-bold">${item.price}</span>
               </div>
             </div>
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
