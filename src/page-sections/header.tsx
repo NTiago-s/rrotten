@@ -9,7 +9,7 @@ export default function Header() {
           <img
             src="/logo-codeluxe.webp"
             alt="Logo Codeluxe"
-            className="size-12 rounded-full active:scale-90 hover:contrast-50 transition cursor-pointer hover:shadow-2xl hover:shadow-primary/50"
+            className="w-12 h-12 rounded-full active:scale-90 hover:contrast-50 transition cursor-pointer hover:shadow-2xl hover:shadow-primary/50"
           />
         </Link>
 
@@ -20,7 +20,9 @@ export default function Header() {
               href={option.href}
               aria-label={option.title}
               className="text-primary-txt hover:shadow-inner hover:shadow-primary/50 hover:scale-110 p-2 rounded-xl transition"
-            ></a>
+            >
+              {option.icon && <option.icon />}
+            </a>
           ))}
         </div>
       </nav>
