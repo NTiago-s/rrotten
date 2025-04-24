@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function Footer() {
   return (
-    <footer className="bg-secondary shadow-sm">
+    <footer className="bg-background shadow-sm">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link
@@ -35,15 +35,6 @@ export default function Footer() {
                 aria-label="Términos y condiciones"
               >
                 Términos y condiciones
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/propuesta"
-                className="hover:underline"
-                aria-label="Solicitá una propuesta"
-              >
-                Solicitá una propuesta
               </Link>
             </li>
           </ul>

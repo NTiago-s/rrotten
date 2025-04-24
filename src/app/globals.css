@@ -3,14 +3,13 @@
 /* General */
 
 :root {
-  --background: #080c11;
-  --primary: #83cee5;
-  --secondary: #1e2e39;
+  --background: #0b151d ;
+  --primary: #8D99AE ;
+  --secondary: #BDC3C7 ;
   --glass: #0b151daa;
-  --primary-txt: #ebf3f4;
-  --secondary-txt: #d9ecf6;
-  --error: #f44336;
-
+  --primary-txt: #EDF2F4 ;
+  --secondary-txt: #1E90FF;
+  --error: #EF233C;
   scrollbar-width: thin;
   scrollbar-color: var(--primary) var(--background);
 }
@@ -26,28 +25,9 @@
 }
 
 body {
-  background: linear-gradient(
-    180deg,
-    var(--background) 25%,
-    #04121d 50%,
-    var(--background) 75%
-  );
+  background:var(--background);
 }
 
-h1,
-h2,
-h3,
-button {
+h1{
   color: var(--primary-txt);
 }
-
-p {
-  color: var(--secondary-txt);
-}
-
-footer {
-  background: #0002;
-  backdrop-filter: blur(10px);
-  border-top: 1px solid #83cee599;
-}
-
