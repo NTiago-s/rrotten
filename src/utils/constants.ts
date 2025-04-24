@@ -7,7 +7,7 @@ import {
 export const navOptions = [
   {
     title: "Carta",
-    href: "#",
+    href: "#Carta",
     icon: IconClipboardText,
   },
   {
