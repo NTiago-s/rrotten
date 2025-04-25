@@ -25,8 +25,12 @@
 }
 
 body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto ;
   background:var(--background);
 }
+
 
 h1{
   color: var(--primary-txt);
