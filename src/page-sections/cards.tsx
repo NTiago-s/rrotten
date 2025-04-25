@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { menuItems } from "@/utils/menu";
+import Link from "next/link";
 import Modal from "../components/modal";
 
 type MenuItem = {
@@ -34,12 +35,12 @@ export default function Card() {
   return (
     <>
       {Object.entries(groupedItems).map(([category, items]) => (
-        <div key={category} className="mb-10">
-          <h2 className="text-2xl font-bold mb-4 px-4 text-primary-txt">
+        <div key={category} className="w-full mb-10 ">
+          <h2 className="text-2xl font-bold mb-4 text-primary-txt">
             {category}
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
-            {items.map((item) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {items.slice(0, 3).map((item) => (
               <div
                 key={item.id}
                 className="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl relative group"
@@ -64,13 +65,22 @@ export default function Card() {
                   />
                   <button
                     onClick={() => setSelectedItem(item)}
-                    className="relative z-10 px-4 py-2 bg-background text-white font-semibold rounded-lg shadow hover:bg-gray-700 cursor-pointer"
+                    className="relative z-10 px-4 py-2 bg-background text-white font-semibold rounded-lg shadow hover:bg-yellow-700 cursor-pointer"
                   >
                     Ver más
                   </button>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="flex justify-center mt-4">
+            <Link
+              href={`/menu/${category.toLowerCase()}`}
+              className="text-primary hover:underline text-xl font-semibold"
+            >
+              Ver todo
+            </Link>
           </div>
         </div>
       ))}
