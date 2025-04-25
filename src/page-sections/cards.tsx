@@ -43,6 +43,7 @@ export default function Card() {
             {items.slice(0, 3).map((item) => (
               <div
                 key={item.id}
+                onClick={() => setSelectedItem(item)}
                 className="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl relative group"
               >
                 <img
@@ -63,12 +64,6 @@ export default function Card() {
                     className="absolute inset-0 bg-cover bg-center transform scale-110 brightness-75 transition duration-300"
                     style={{ backgroundImage: `url(${item.image})` }}
                   />
-                  <button
-                    onClick={() => setSelectedItem(item)}
-                    className="relative z-10 px-4 py-2 bg-background text-white font-semibold rounded-lg shadow hover:bg-yellow-700 cursor-pointer"
-                  >
-                    Ver más
-                  </button>
                 </div>
               </div>
             ))}
