@@ -3,20 +3,7 @@ import { useState } from "react";
 import { menuItems } from "@/utils/menu";
 import Link from "next/link";
 import Modal from "../components/modal";
-
-type MenuItem = {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  category: string;
-  image: string;
-  calories: number;
-  fat: number;
-  carbs: number;
-  protein: number;
-  badges: string[];
-};
+import { MenuItem } from "@/utils/types";
 
 const groupByCategory = (items: MenuItem[]) => {
   return items.reduce((acc: Record<string, MenuItem[]>, item) => {
@@ -44,7 +31,7 @@ export default function Card() {
               <div
                 key={item.id}
                 onClick={() => setSelectedItem(item)}
-                className="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl relative group"
+                className="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl relative group cursor-pointer"
               >
                 <img
                   src={item.image}
