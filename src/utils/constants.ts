@@ -6,17 +6,32 @@ import {
 
 export const navOptions = [
   {
-    title: "Carta",
+    title: "HOME",
+    href: "/",
+    icon: IconClipboardText,
+  },
+  {
+    title: "CONCEPTO",
+    href: "#",
+    icon: IconClipboardText,
+  },
+  {
+    title: "MENU",
     href: "#Carta",
     icon: IconClipboardText,
   },
   {
-    title: "Sobre Nosotros",
+    title: "SOBRE NOSOTROS",
     href: "/info",
     icon: IconInfoCircle,
   },
   {
-    title: "Instagram",
+    title: "UBICACION",
+    href: "#",
+    icon: IconBrandInstagram,
+  },
+  {
+    title: "CONTACTO",
     href: "#",
     icon: IconBrandInstagram,
   },
