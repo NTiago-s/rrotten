@@ -9,9 +9,6 @@ export default function Hero() {
         <p className="mt-4 text-lg md:text-xl text-gray-200">
           Cocina casera con ingredientes frescos y pasión en cada plato.
         </p>
-        <button className="mt-6 px-6 py-3 bg-yellow-500 text-black font-semibold rounded-xl hover:bg-yellow-400 cursor-pointer transition">
-          Reservar ahora
-        </button>
       </div>
     </div>
   );
