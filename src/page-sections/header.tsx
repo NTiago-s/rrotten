@@ -1,26 +1,37 @@
+"use client";
+import NavButton from "@/ui/nav-button";
+import NavOptionsMenu from "@/ui/nav-menu-options";
+import NavOptionsList from "@/ui/nav-options-list";
 import { navOptions } from "@/utils/constants";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Header({ fontClass }: { fontClass: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleClick = (e: any) => {
+      const target = e.target;
+      if (target.closest("nav") || target.closest("#nav-button")) return;
+      setIsOpen(false);
+    };
+
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
+  const mid = Math.ceil(navOptions.length / 2);
+
   return (
     <header className="z-10 sticky top-0">
       <nav
-        className={`flex items-center text-sm justify-center px-8 py-2 gap-10 mx-auto bg-background text-primary-txt min-h-20 ${fontClass}`}
+        className={`flex items-center text-sm justify-between md:justify-center px-8 py-2 gap-10 mx-auto bg-background text-primary-txt min-h-20 ${fontClass}`}
       >
-        <div className="flex gap-6">
-          {navOptions
-            .slice(0, Math.ceil(navOptions.length / 2))
-            .map((option) => (
-              <a
-                key={option.title}
-                href={option.href}
-                aria-label={option.title}
-                className="text-primary-txt hover:shadow-inner hover:shadow-primary/50 hover:scale-110 p-2 rounded-xl transition"
-              >
-                {option.title}
-              </a>
-            ))}
-        </div>
+        <NavOptionsList
+          data={navOptions.slice(0, mid)}
+          className="hidden md:flex gap-6"
+        />
+
         <Link href="/" aria-label="Inicio" className="shrink-0">
           <img
             src="/logo-rrotten.jpeg"
@@ -28,18 +39,22 @@ export default function Header({ fontClass }: { fontClass: string }) {
             className="size-16 rounded-full active:scale-90 hover:contrast-50 transition cursor-pointer hover:shadow-2xl hover:shadow-primary/50"
           />
         </Link>
-        <div className="flex gap-6">
-          {navOptions.slice(Math.ceil(navOptions.length / 2)).map((option) => (
-            <a
-              key={option.title}
-              href={option.href}
-              aria-label={option.title}
-              className="text-primary-txt hover:shadow-inner hover:shadow-primary/50 hover:scale-110 p-2 rounded-xl transition"
-            >
-              {option.title}
-            </a>
-          ))}
+
+        <NavOptionsList
+          data={navOptions.slice(mid)}
+          className="hidden md:flex gap-6"
+        />
+
+        <div id="nav-button">
+          <NavButton
+            isOpen={isOpen}
+            toggle={() => setIsOpen((prev) => !prev)}
+          />
         </div>
+
+        {isOpen && (
+          <NavOptionsMenu data={navOptions} onSelect={() => setIsOpen(false)} />
+        )}
       </nav>
     </header>
   );
