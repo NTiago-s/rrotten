@@ -10,7 +10,7 @@ export default function Footer() {
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
             <img
-              src="/logo-codeluxe.webp"
+              src="/logo-rrotten.jpeg"
               className="h-8 rounded-full active:scale-90 hover:contrast-50 transition cursor-pointer hover:shadow-2xl hover:shadow-primary/50"
               alt="Flowbite Logo"
             />
