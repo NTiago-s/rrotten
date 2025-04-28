@@ -3,7 +3,7 @@ import { useState } from "react";
 import { menuItems } from "@/utils/menu";
 import Link from "next/link";
 import Modal from "../components/modal";
-import { MenuItem } from "@/utils/types";
+import { MenuItem } from "@/types";
 
 const groupByCategory = (items: MenuItem[]) => {
   return items.reduce((acc: Record<string, MenuItem[]>, item) => {
