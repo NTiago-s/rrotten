@@ -13,11 +13,7 @@ export const navOptions = [
     href: "/",
     icon: IconHome,
   },
-  {
-    title: "SOBRE NOSOTROS",
-    href: "/info",
-    icon: IconInfoCircle,
-  },
+
   {
     title: "MENU",
     href: "#Carta",
@@ -37,5 +33,10 @@ export const navOptions = [
     title: "CONTACTO",
     href: "#",
     icon: IconBrandInstagram,
+  },
+  {
+    title: "SOBRE NOSOTROS",
+    href: "/info",
+    icon: IconInfoCircle,
   },
 ];
