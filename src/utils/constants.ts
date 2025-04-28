@@ -4,6 +4,7 @@ import {
   IconBrandInstagram,
   IconHome,
   IconContract,
+  IconMapPin,
 } from "@tabler/icons-react";
 
 export const navOptions = [
@@ -30,7 +31,7 @@ export const navOptions = [
   {
     title: "UBICACION",
     href: "#",
-    icon: IconBrandInstagram,
+    icon: IconMapPin,
   },
   {
     title: "CONTACTO",
