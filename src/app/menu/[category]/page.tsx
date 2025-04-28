@@ -3,8 +3,8 @@ import { useParams } from "next/navigation";
 import { menuItems } from "@/utils/menu";
 import Modal from "@/components/modal";
 import { useState } from "react";
-import { MenuItem } from "@/utils/types";
 import Link from "next/link";
+import { MenuItem } from "@/types";
 
 export default function CategoryPage() {
   const params = useParams();

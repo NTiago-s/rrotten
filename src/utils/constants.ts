@@ -2,23 +2,16 @@ import {
   IconInfoCircle,
   IconClipboardText,
   IconBrandInstagram,
+  IconHome,
+  IconContract,
+  IconMapPin,
 } from "@tabler/icons-react";
 
 export const navOptions = [
   {
     title: "HOME",
     href: "/",
-    icon: IconClipboardText,
-  },
-  {
-    title: "CONCEPTO",
-    href: "#",
-    icon: IconClipboardText,
-  },
-  {
-    title: "MENU",
-    href: "#Carta",
-    icon: IconClipboardText,
+    icon: IconHome,
   },
   {
     title: "SOBRE NOSOTROS",
@@ -26,9 +19,19 @@ export const navOptions = [
     icon: IconInfoCircle,
   },
   {
+    title: "MENU",
+    href: "#Carta",
+    icon: IconClipboardText,
+  },
+  {
+    title: "CONCEPTO",
+    href: "#",
+    icon: IconContract,
+  },
+  {
     title: "UBICACION",
     href: "#",
-    icon: IconBrandInstagram,
+    icon: IconMapPin,
   },
   {
     title: "CONTACTO",

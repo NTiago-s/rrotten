@@ -1,3 +1,9 @@
+export interface NavOption {
+  title: string;
+  href: string;
+  icon: React.ElementType; // Porque usas <option.icon />
+}
+
 export type MenuItem = {
   id: number;
   title: string;

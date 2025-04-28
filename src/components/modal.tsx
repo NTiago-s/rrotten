@@ -1,18 +1,6 @@
+import { MenuItem } from "@/types";
 import React from "react";
 import ReactDOM from "react-dom";
-
-interface MenuItem {
-  title: string;
-  price: number;
-  description: string;
-  image: string;
-  calories: number;
-  fat: number;
-  carbs: number;
-  protein: number;
-  badges?: string[];
-  category?: string;
-}
 
 interface ModalProps {
   item: MenuItem;
