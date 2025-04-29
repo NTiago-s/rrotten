@@ -17,10 +17,8 @@ export default function Map() {
       style={{ height: "500px", width: "100%" }}
     >
       <TileLayer
-        url={`https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{z}/{x}/{y}?access_token=${process.env.NEXT_PUBLIC_MAPBOX_TOKEN}`}
-        attribution='&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; OpenStreetMap'
-        tileSize={512}
-        zoomOffset={-1}
+        attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a>'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
       <Marker position={[-34.6037, -58.3816]}>
