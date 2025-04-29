@@ -1,5 +1,6 @@
 import { Montserrat, Josefin_Sans } from "next/font/google";
 import "./globals.css";
+import "leaflet/dist/leaflet.css";
 import Header from "@/page-sections/header";
 import Footer from "@/page-sections/footer";
 
