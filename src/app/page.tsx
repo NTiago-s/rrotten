@@ -3,6 +3,7 @@ import SectionContainer from "@/components/section-container";
 import Title from "@/ui/title";
 import Hero from "@/page-sections/hero";
 import About from "@/page-sections/about";
+import MapView from "@/ui/map-view";
 
 export default function Home() {
   return (
@@ -16,6 +17,9 @@ export default function Home() {
       </SectionContainer>
       <SectionContainer id="Informacion del restaurant">
         <About />
+      </SectionContainer>
+      <SectionContainer id="Map de Rrotten">
+        <MapView />
       </SectionContainer>
     </main>
   );
