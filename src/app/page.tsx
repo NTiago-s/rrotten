@@ -4,6 +4,7 @@ import Title from "@/ui/title";
 import Hero from "@/page-sections/hero";
 import About from "@/page-sections/about";
 import MapView from "@/ui/map-view";
+import Contact from "@/page-sections/contact";
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
       </SectionContainer>
       <SectionContainer id="Informacion del restaurant">
         <About />
+      </SectionContainer>
+      <SectionContainer id="Contacto">
+        <Contact />
       </SectionContainer>
       <SectionContainer id="Map de Rrotten">
         <MapView />
