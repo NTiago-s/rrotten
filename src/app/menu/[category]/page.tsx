@@ -4,6 +4,7 @@ import { menuItems } from "@/utils/menu";
 import Modal from "@/components/modal";
 import { useState } from "react";
 import Link from "next/link";
+import { IconCornerDownLeftDouble } from "@tabler/icons-react";
 import { MenuItem } from "@/types";
 
 export default function CategoryPage() {
@@ -21,15 +22,17 @@ export default function CategoryPage() {
 
   return (
     <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-      <div className="mb-6">
+      <div>
         <h1 className="text-3xl font-bold mb-6 capitalize text-primary-txt">
           {categoryParam}
         </h1>
+      </div>
+      <div className="mb-6 hover:bg-secondary  rounded-lg w-fit">
         <Link
           href="/"
-          className="text-primary hover:underline text-xl font-semibold underline"
+          className="text-primary hover:text-glass text-4xl w-auto  font-semibold underline"
         >
-          Volver atras
+          <IconCornerDownLeftDouble className="size-8" />
         </Link>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

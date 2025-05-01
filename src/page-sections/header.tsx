@@ -25,7 +25,7 @@ export default function Header({ fontClass }: { fontClass: string }) {
   return (
     <header className="z-10 sticky top-0">
       <nav
-        className={`flex items-center text-sm justify-between md:justify-center px-8 py-2 gap-10 mx-auto bg-background text-primary-txt min-h-20 ${fontClass}`}
+        className={`flex items-center text-sm justify-between md:justify-center py-2 gap-10 mx-auto bg-background text-primary-txt min-h-20 ${fontClass}`}
       >
         <NavOptionsList
           data={navOptions.slice(0, mid)}

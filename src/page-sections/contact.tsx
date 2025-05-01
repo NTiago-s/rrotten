@@ -14,7 +14,10 @@ export default function Contacto() {
         <div>
           <h3>TELÉFONO</h3>
           <hr />
-          <p>02 8454 2968</p>
+          <p>(+54) 02 8454 2968</p>
+          <h3>Email</h3>
+          <hr />
+          <p>rrotten@gmail.com</p>
         </div>
 
         <div>
