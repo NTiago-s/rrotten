@@ -3,7 +3,7 @@ export default function Contacto() {
     <div className="flex flex-col items-center gap-6 justify-center">
       <h1 className="text-xl font-semibold">CONTACTO</h1>
 
-      <div className="flex flex-col md:flex-wrap gap-10 text-primary-txt justify-between">
+      <div className="flex flex-col md:flex-row gap-10 text-primary-txt justify-between">
         <div>
           <h3>DIRECCIÓN</h3>
           <hr />
