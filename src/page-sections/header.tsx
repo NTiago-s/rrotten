@@ -23,29 +23,29 @@ export default function Header({ fontClass }: { fontClass: string }) {
   const mid = Math.ceil(navOptions.length / 2);
 
   return (
-    <header className="z-10 sticky top-0">
+    <header className="z-10 sticky top-0 bg-background">
       <nav
-        className={`flex items-center text-sm justify-between md:justify-center py-2 gap-10 mx-auto bg-background text-primary-txt min-h-20 ${fontClass}`}
+        className={`relative grid grid-cols-3 items-center text-sm py-2 gap-4 max-w-6xl mx-auto text-primary-txt min-h-20 ${fontClass}`}
       >
-        <NavOptionsList
-          data={navOptions.slice(0, mid)}
-          className="hidden md:flex gap-6"
-        />
+        <div className="hidden md:flex justify-end">
+          <NavOptionsList data={navOptions.slice(0, mid)} />
+        </div>
 
-        <Link href="/" aria-label="Inicio" className="shrink-0">
-          <img
-            src="/logo-rrotten.jpeg"
-            alt="Logo Rrotten"
-            className="size-16 rounded-full active:scale-90 hover:contrast-50 transition cursor-pointer hover:shadow-2xl hover:shadow-primary/50"
-          />
-        </Link>
+        <div className="flex justify-center">
+          <Link href="/" aria-label="Inicio" className="shrink-0">
+            <img
+              src="/logo-rrotten.jpeg"
+              alt="Logo Rrotten"
+              className="size-16 rounded-full active:scale-90 hover:contrast-50 transition cursor-pointer hover:shadow-2xl hover:shadow-primary/50"
+            />
+          </Link>
+        </div>
 
-        <NavOptionsList
-          data={navOptions.slice(mid)}
-          className="hidden md:flex gap-6"
-        />
+        <div className="hidden md:flex justify-start gap-4">
+          <NavOptionsList data={navOptions.slice(mid)} />
+        </div>
 
-        <div id="nav-button">
+        <div id="nav-button" className="absolute right-4 md:hidden">
           <NavButton
             isOpen={isOpen}
             toggle={() => setIsOpen((prev) => !prev)}

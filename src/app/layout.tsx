@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
   preload: true,
-  weight: ["400", "500", "700"],
+  // weight: ["400", "500", "700"],
   display: "swap",
 });
 

@@ -8,7 +8,7 @@ import Contact from "@/page-sections/contact";
 
 export default function Home() {
   return (
-    <main className="max-w-7xl mx-auto my-12 flex justify-center flex-col gap-9 px-4">
+    <main className="mx-auto md:m-12 flex justify-center flex-col gap-9 px-4">
       <SectionContainer id="Hero">
         <Hero />
       </SectionContainer>

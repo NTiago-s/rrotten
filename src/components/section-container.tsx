@@ -12,7 +12,7 @@ export default function SectionContainer({
   return (
     <section
       id={id}
-      className="bg-glass backdrop-blur-md rounded-xl p-6 flex flex-col items-center gap-6"
+      className="bg-glass backdrop-blur-md rounded-xl w-full flex flex-col items-center justify-center "
     >
       {children}
     </section>
