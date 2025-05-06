@@ -23,9 +23,9 @@ export default function Header({ fontClass }: { fontClass: string }) {
   const mid = Math.ceil(navOptions.length / 2);
 
   return (
-    <header className="z-10 sticky top-0 bg-background">
+    <header className="z-10 sticky top-0 bg-background border-b-2 border-gray-600">
       <nav
-        className={`relative grid grid-cols-3 items-center text-sm py-2 gap-4 max-w-6xl mx-auto text-primary-txt min-h-20 ${fontClass}`}
+        className={`relative grid grid-cols-3 items-center  text-sm py-2 gap-4 max-w-6xl mx-auto text-primary-txt min-h-20 ${fontClass}`}
       >
         <div className="hidden md:flex justify-end">
           <NavOptionsList data={navOptions.slice(0, mid)} />
