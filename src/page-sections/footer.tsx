@@ -11,7 +11,7 @@ export default function Footer() {
           >
             <img
               src="/logo-rrotten.jpeg"
-              className="h-8 rounded-full active:scale-90 hover:contrast-50 transition cursor-pointer hover:shadow-2xl hover:shadow-primary/50"
+              className="size-12 rounded-full active:scale-90 hover:contrast-50 transition cursor-pointer hover:shadow-2xl hover:shadow-primary/50"
               alt="Flowbite Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-primary-txt">
